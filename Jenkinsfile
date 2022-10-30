@@ -25,7 +25,7 @@ pipeline {
             }
         }
         
-        stage("Deploy on Rancher as single pod") {
+        stage("Update on Rancher / GKE Cluster") {
             steps {
                 script {
                     sh 'kubectl rollout restart deploy deploy1 -n swe'
@@ -35,11 +35,7 @@ pipeline {
         
 
         
-        
-        
-        
-
-               
+         
         
     }
 
