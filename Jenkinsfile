@@ -28,19 +28,13 @@ pipeline {
         stage("Deploy on Rancher as single pod") {
             steps {
                 script {
-                    sh 'kubectl set image deployment/deploy1 container-0=arajput4/surveyform:latest -n swe'
+                    sh 'kubectl rollout restart deploy deploy1 -n swe'
                 }
             }
         }
         
 
-        stage("Deploy on Rancher with load balancer") {
-            steps {
-                script {
-                    sh 'kubectl set image deployment/deploy1 deploy1=arajput4/surveyform:latest -n swe'
-                }
-            }
-        }
+        
         
         
         
