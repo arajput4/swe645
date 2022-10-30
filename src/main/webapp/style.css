@@ -47,7 +47,7 @@ body::before {
   background: var(--color-darkblue);
   background-image: linear-gradient(
       115deg,
-      rgba(58, 58, 158, 0.8),
+      #FFCC33,
       rgba(136, 136, 206, 0.7)
     ),
 url("../images/Surveyimage.jpg");    /* putting a linear gradient on the background image of two different color */
