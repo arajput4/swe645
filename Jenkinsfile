@@ -37,7 +37,7 @@ pipeline {
         stage("Deploy on Rancher with load balancer") {
             steps {
                 script {
-                    sh 'kubectl set image deployment/lb1 container-0=arajput4/surveyform:latest -n swe'
+                    sh 'kubectl set image deployment/deploy1-loadbalancer deploy1-loadbalancer=arajput4/surveyform:latest -n swe'
                 }
             }
         }
